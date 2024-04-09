@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */; };
+		F1DBEFCB2BBE3F30009DE466 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFCA2BBE3F30009DE466 /* ContentView.swift */; };
+		F1DBEFCD2BBE3F32009DE466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */; };
+		F1DBEFD02BBE3F32009DE466 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DBEFCF2BBE3F32009DE466 /* Preview Assets.xcassets */; };
+		F1DBEFD72BBE4B9D009DE466 /* SimonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */; };
+		F1DBEFDC2BBF1789009DE466 /* SimonWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */; };
+		F1DBEFE02BBF18AB009DE466 /* WheelSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */; };
+		F1DBEFE22BBF37C5009DE466 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F1DBEFC52BBE3F30009DE466 /* SimonSays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimonSays.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonSaysApp.swift; sourceTree = "<group>"; };
+		F1DBEFCA2BBE3F30009DE466 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F1DBEFCF2BBE3F32009DE466 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonWheel.swift; sourceTree = "<group>"; };
+		F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonWheelView.swift; sourceTree = "<group>"; };
+		F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSegment.swift; sourceTree = "<group>"; };
+		F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F1DBEFC22BBE3F30009DE466 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F1DBEFBC2BBE3F30009DE466 = {
+			isa = PBXGroup;
+			children = (
+				F1DBEFC72BBE3F30009DE466 /* SimonSays */,
+				F1DBEFC62BBE3F30009DE466 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F1DBEFC62BBE3F30009DE466 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBEFC52BBE3F30009DE466 /* SimonSays.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F1DBEFC72BBE3F30009DE466 /* SimonSays */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */,
+				F1DBEFCA2BBE3F30009DE466 /* ContentView.swift */,
+				F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */,
+				F1DBEFD82BBF16F6009DE466 /* Wheel */,
+				F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */,
+				F1DBEFCE2BBE3F32009DE466 /* Preview Content */,
+			);
+			path = SimonSays;
+			sourceTree = "<group>";
+		};
+		F1DBEFCE2BBE3F32009DE466 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBEFCF2BBE3F32009DE466 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F1DBEFD82BBF16F6009DE466 /* Wheel */ = {
+			isa = PBXGroup;
+			children = (
+				F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */,
+				F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */,
+				F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */,
+			);
+			path = Wheel;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F1DBEFC42BBE3F30009DE466 /* SimonSays */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1DBEFD32BBE3F32009DE466 /* Build configuration list for PBXNativeTarget "SimonSays" */;
+			buildPhases = (
+				F1DBEFC12BBE3F30009DE466 /* Sources */,
+				F1DBEFC22BBE3F30009DE466 /* Frameworks */,
+				F1DBEFC32BBE3F30009DE466 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimonSays;
+			productName = SimonSays;
+			productReference = F1DBEFC52BBE3F30009DE466 /* SimonSays.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F1DBEFBD2BBE3F30009DE466 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					F1DBEFC42BBE3F30009DE466 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = F1DBEFC02BBE3F30009DE466 /* Build configuration list for PBXProject "SimonSays" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F1DBEFBC2BBE3F30009DE466;
+			productRefGroup = F1DBEFC62BBE3F30009DE466 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F1DBEFC42BBE3F30009DE466 /* SimonSays */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F1DBEFC32BBE3F30009DE466 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DBEFD02BBE3F32009DE466 /* Preview Assets.xcassets in Resources */,
+				F1DBEFCD2BBE3F32009DE466 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F1DBEFC12BBE3F30009DE466 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F1DBEFE22BBF37C5009DE466 /* GameLogic.swift in Sources */,
+				F1DBEFCB2BBE3F30009DE466 /* ContentView.swift in Sources */,
+				F1DBEFD72BBE4B9D009DE466 /* SimonWheel.swift in Sources */,
+				F1DBEFE02BBF18AB009DE466 /* WheelSegment.swift in Sources */,
+				F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */,
+				F1DBEFDC2BBF1789009DE466 /* SimonWheelView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F1DBEFD12BBE3F32009DE466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F1DBEFD22BBE3F32009DE466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F1DBEFD42BBE3F32009DE466 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimonSays/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.SimonSays;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F1DBEFD52BBE3F32009DE466 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SimonSays/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Daniel.SimonSays;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F1DBEFC02BBE3F30009DE466 /* Build configuration list for PBXProject "SimonSays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DBEFD12BBE3F32009DE466 /* Debug */,
+				F1DBEFD22BBE3F32009DE466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F1DBEFD32BBE3F32009DE466 /* Build configuration list for PBXNativeTarget "SimonSays" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F1DBEFD42BBE3F32009DE466 /* Debug */,
+				F1DBEFD52BBE3F32009DE466 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F1DBEFBD2BBE3F30009DE466 /* Project object */;
+}
