@@ -60,7 +60,13 @@ func gameLoop(difficulty: String){
     var flawless = true
     
     while flawless {
+        //display pattern to player
         
+        //player attempts to match pattern
+        //match sequence breaks if ANY incorrect
+        
+        
+        //level increment stuff
     }
 }
 
