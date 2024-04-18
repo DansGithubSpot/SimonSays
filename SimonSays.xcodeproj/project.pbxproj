@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F1CA79D42BD0918F00AF9ED1 /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */; };
+		F1CA79D82BD1AB1900AF9ED1 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */; };
+		F1CA79DC2BD1C36000AF9ED1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */; };
 		F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */; };
 		F1DBEFCB2BBE3F30009DE466 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFCA2BBE3F30009DE466 /* ContentView.swift */; };
 		F1DBEFCD2BBE3F32009DE466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
+		F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
+		F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F1DBEFC52BBE3F30009DE466 /* SimonSays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimonSays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonSaysApp.swift; sourceTree = "<group>"; };
 		F1DBEFCA2BBE3F30009DE466 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +67,8 @@
 			children = (
 				F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */,
 				F1DBEFCA2BBE3F30009DE466 /* ContentView.swift */,
+				F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */,
+				F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */,
 				F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */,
 				F1DBEFD82BBF16F6009DE466 /* Wheel */,
 				F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */,
@@ -82,6 +90,7 @@
 			children = (
 				F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */,
 				F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */,
+				F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */,
 				F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */,
 			);
 			path = Wheel;
@@ -160,7 +169,10 @@
 				F1DBEFE22BBF37C5009DE466 /* GameLogic.swift in Sources */,
 				F1DBEFCB2BBE3F30009DE466 /* ContentView.swift in Sources */,
 				F1DBEFD72BBE4B9D009DE466 /* SimonWheel.swift in Sources */,
+				F1CA79D82BD1AB1900AF9ED1 /* SettingsMenu.swift in Sources */,
+				F1CA79D42BD0918F00AF9ED1 /* ButtonWheel.swift in Sources */,
 				F1DBEFE02BBF18AB009DE466 /* WheelSegment.swift in Sources */,
+				F1CA79DC2BD1C36000AF9ED1 /* Settings.swift in Sources */,
 				F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */,
 				F1DBEFDC2BBF1789009DE466 /* SimonWheelView.swift in Sources */,
 			);

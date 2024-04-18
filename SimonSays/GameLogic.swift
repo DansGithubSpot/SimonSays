@@ -6,6 +6,64 @@
 //
 
 import Foundation
+import SwiftUI
+
+
+class gameLogic {
+    
+    //include set of tones for play and playback
+    
+    @State var gameOn = false
+    @State var playerTurn = false
+    @State var currentLevel = 0
+    @State var totalSegments = 3
+    @State var tempo = 1
+    
+    let colors = [
+        Color.red,
+        Color.blue,
+        Color.yellow,
+        Color.green,
+        Color.purple,
+        Color.orange,
+        Color.white,
+        Color.cyan,
+        Color.pink,
+        Color.indigo
+    ]
+    
+    
+    func gameLoop() {
+        gameOn = true
+        var flawless = true
+        
+        while flawless {
+            
+        }
+        
+    }
+    
+    /*
+    func displayPattern() -> [Int] {
+        var pattern: [Int] = []
+        
+    }
+     
+     
+     func matchPattern(pattern: [Int]) -> Bool {
+     
+     }
+     */
+    
+    func flash() {
+        
+    }
+    
+    
+    
+}
+
+
 
 /*
 func gameLoop(difficulty: [String]){

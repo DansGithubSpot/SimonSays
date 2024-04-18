@@ -10,7 +10,17 @@ import SwiftUI
 struct SimonWheel: View {
     
     var totalSegments: Int?
-    var colors: [Color]?
+    var colors: [Color] = [
+        Color.red,
+        Color.blue,
+        Color.yellow,
+        Color.green,
+        Color.purple,
+        Color.orange,
+        Color.cyan,
+        Color.pink,
+        Color.indigo
+    ]
     
     @State var playerTurn: Bool?
     @State var selectedSegment: Int?
@@ -38,20 +48,30 @@ struct SimonWheel: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
+                
+                //graft button logic from guesstheflag to here
                 ForEach(0..<totalSegments!, id: \.self){index in
                     WheelSegment(startAngle: startAngles[index], endAngle: endAngles[index])
-                        .fill(colors![index])
-                        .stroke(Color.gray, lineWidth: 2)
+                        .fill(colors[index])
+                        .stroke(Color.gray, lineWidth: 4)
                         .shadow(radius: 5)
                         .onTapGesture {
-                            if playerTurn! {
-                                withAnimation {
-                                    
-                                }
+                            print("section \(index)")
+                            withAnimation(.easeOut) {
+                                
                             }
+                            /*
+                            if playerTurn! {
+                                
+                            }
+                             */
+                            //blink()
+                        
                         }
                         
                 }
+                
+                //make second wheel overlay for flashed sections
                 
                 Circle()
                     .foregroundColor(Color.gray)
@@ -63,13 +83,23 @@ struct SimonWheel: View {
                  Incorrect input flashes red a few times
                  Timer flashes white while player inputs pattern
                  */
+                
+                Circle()
+                    .foregroundColor(.white)
+                    .frame(width: geo.size.width/7)
+                    .opacity(0.5)
             }
         }
     }
+    
+    
 }
 
+
+
+
 #Preview {
-    SimonWheel(totalSegments: 5, colors: [
+    SimonWheel(totalSegments: 8, colors: [
         Color.red,
         Color.blue,
         Color.yellow,

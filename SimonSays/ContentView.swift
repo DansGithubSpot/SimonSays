@@ -7,7 +7,17 @@
 
 import SwiftUI
 
+struct Dif {
+    var type: String
+    var startLevel: Int
+    var segmentcount: Int
+    var tempo: Double
+}
+
+
 struct ContentView: View {
+    
+    @State var settingsScreen = false
     
     var difficulties: [String : [String]] = [
         "Easy": ["3","3","1.5"],
@@ -16,85 +26,67 @@ struct ContentView: View {
         "Custom": ["","",""] //blank initialized array for tweaked custom difficulty
     ]
     
-    //implement user and scoring abilities
-    
-    @State var selectedDifficulty = "Easy"
-    @State var totalSegments: Int?
-    @State var level: Int?
-    @State var tempo: Double?
-    @State var playerTurn: Bool = false
-    
-    
-    var colors = [
+    var colors: [Color] = [
         Color.red,
         Color.blue,
         Color.yellow,
         Color.green,
         Color.purple,
         Color.orange,
-        Color.white,
         Color.cyan,
         Color.pink,
         Color.indigo
     ]
     
     
+
+    
+    
     
     var body: some View {
-        VStack {
-            
-            
-            HStack{
-                //play button
+        NavigationStack {
+            VStack {
                 
-                //settings button
+                //Simon Wheel
+                SimonWheel(totalSegments: 5, colors: colors)
+                
+                
+                HStack{
+                    Spacer()
+                    //play button
+                    Button("Play", action: {})
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundStyle(.white)
+                        .background(.green)
+                        .buttonStyle(.bordered)
+                        .cornerRadius(5)
+                        //.clipShape(.capsule)
+                        //.frame(width: 100, height:60)
+                    
+                    Spacer()
+                    //settings button
+                    Button("Settings", action: {settingsScreen = true})
+                        .font(.largeTitle.weight(.bold))
+                        .foregroundStyle(.white)
+                        .background(.black)
+                        .buttonStyle(.bordered)
+                        .cornerRadius(5)
+                    
+                    Spacer()
+                }
+                Spacer()
+                Spacer()
+            
             }
         }
-        .padding()
+        .sheet(isPresented: $settingsScreen) {
+            SettingsMenu()
+        }
     }
 }
 
 
-//Game Logic
-func gameLoop(difficulty: String){
-    var flawless = true
-    
-    while flawless {
-        //display pattern to player
-        
-        //player attempts to match pattern
-        //match sequence breaks if ANY incorrect
-        
-        
-        //level increment stuff
-    }
-}
 
-func displayPattern(level: Int, totalSegments: Int) -> [Int]{
-    var pattern: [Int] = []
-    for _ in 0..<level{
-        
-        pattern.append(Int.random(in: 0..<totalSegments))
-    }
-    return pattern
-}
-
-func matchPattern(pattern: [Int]) -> Bool{
-    var position = 0
-    
-    while position != pattern.count {
-        
-        
-        position += 1
-    }
-    
-    return false //placeholder
-}
-
-//for center indicator
-func flash(){
-    
-}
 
 #Preview {
     ContentView()
