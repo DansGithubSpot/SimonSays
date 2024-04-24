@@ -57,7 +57,7 @@ struct SimonWheel: View {
                         .shadow(radius: 5)
                         .onTapGesture {
                             print("section \(index)")
-                            withAnimation(.easeOut) {
+                            withAnimation {
                                 
                             }
                             /*
