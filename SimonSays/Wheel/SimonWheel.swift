@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import AVFoundation
+
+var player: AVAudioPlayer!
 
 struct SimonWheel: View {
     
@@ -21,6 +24,19 @@ struct SimonWheel: View {
         Color.pink,
         Color.indigo
     ]
+    
+    // Sound File Names
+    var soundFiles: [String] = [
+        "simonbeep_red",
+        "simonbeep_blue",
+        "simonbeep_yellow",
+        "simonbeep_green",
+        "simonbeep_purple",
+        "simonbeep_orange",
+        "simonbeep_cyan",
+        "simonbeep_pink",
+        "simonbeep_indigo"
+    ];
     
     @State var playerTurn: Bool?
     @State var selectedSegment: Int?
@@ -57,6 +73,7 @@ struct SimonWheel: View {
                         .shadow(radius: 5)
                         .onTapGesture {
                             print("section \(index)")
+                            self.playSound(index: index);
                             withAnimation {
                                 
                             }
@@ -89,6 +106,26 @@ struct SimonWheel: View {
                     .frame(width: geo.size.width/7)
                     .opacity(0.5)
             }
+        }
+    }
+    
+    func playSound(index: Int)
+    {
+        let url = Bundle.main.url(forResource: soundFiles[index], withExtension: "wav");
+        
+        // Do nothing if file does not exist
+        guard url != nil else {
+            return;
+        }
+        
+        do
+        {
+            player = try AVAudioPlayer(contentsOf: url!);
+            player?.play();
+        }
+        catch
+        {
+            print("Error in playing sound fx");
         }
     }
     
