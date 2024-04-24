@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B844C7182BD9B1F800F8A420 /* simonbeep_green.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C70F2BD9B1F800F8A420 /* simonbeep_green.wav */; };
+		B844C7192BD9B1F800F8A420 /* simonbeep_orange.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7102BD9B1F800F8A420 /* simonbeep_orange.wav */; };
+		B844C71A2BD9B1F800F8A420 /* simonbeep_red.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7112BD9B1F800F8A420 /* simonbeep_red.wav */; };
+		B844C71B2BD9B1F800F8A420 /* simonbeep_indigo.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7122BD9B1F800F8A420 /* simonbeep_indigo.wav */; };
+		B844C71C2BD9B1F800F8A420 /* simonbeep_purple.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7132BD9B1F800F8A420 /* simonbeep_purple.wav */; };
+		B844C71D2BD9B1F800F8A420 /* simonbeep_cyan.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7142BD9B1F800F8A420 /* simonbeep_cyan.wav */; };
+		B844C71E2BD9B1F800F8A420 /* simonbeep_yellow.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7152BD9B1F800F8A420 /* simonbeep_yellow.wav */; };
+		B844C71F2BD9B1F800F8A420 /* simonbeep_pink.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7162BD9B1F800F8A420 /* simonbeep_pink.wav */; };
+		B844C7202BD9B1F800F8A420 /* simonbeep_blue.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7172BD9B1F800F8A420 /* simonbeep_blue.wav */; };
 		F1CA79D42BD0918F00AF9ED1 /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */; };
 		F1CA79D82BD1AB1900AF9ED1 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */; };
 		F1CA79DC2BD1C36000AF9ED1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */; };
@@ -21,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B844C70F2BD9B1F800F8A420 /* simonbeep_green.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_green.wav; sourceTree = "<group>"; };
+		B844C7102BD9B1F800F8A420 /* simonbeep_orange.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_orange.wav; sourceTree = "<group>"; };
+		B844C7112BD9B1F800F8A420 /* simonbeep_red.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_red.wav; sourceTree = "<group>"; };
+		B844C7122BD9B1F800F8A420 /* simonbeep_indigo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_indigo.wav; sourceTree = "<group>"; };
+		B844C7132BD9B1F800F8A420 /* simonbeep_purple.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_purple.wav; sourceTree = "<group>"; };
+		B844C7142BD9B1F800F8A420 /* simonbeep_cyan.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_cyan.wav; sourceTree = "<group>"; };
+		B844C7152BD9B1F800F8A420 /* simonbeep_yellow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_yellow.wav; sourceTree = "<group>"; };
+		B844C7162BD9B1F800F8A420 /* simonbeep_pink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_pink.wav; sourceTree = "<group>"; };
+		B844C7172BD9B1F800F8A420 /* simonbeep_blue.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_blue.wav; sourceTree = "<group>"; };
 		F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
 		F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -46,6 +64,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B844C70E2BD9B1F800F8A420 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B844C70F2BD9B1F800F8A420 /* simonbeep_green.wav */,
+				B844C7102BD9B1F800F8A420 /* simonbeep_orange.wav */,
+				B844C7112BD9B1F800F8A420 /* simonbeep_red.wav */,
+				B844C7122BD9B1F800F8A420 /* simonbeep_indigo.wav */,
+				B844C7132BD9B1F800F8A420 /* simonbeep_purple.wav */,
+				B844C7142BD9B1F800F8A420 /* simonbeep_cyan.wav */,
+				B844C7152BD9B1F800F8A420 /* simonbeep_yellow.wav */,
+				B844C7162BD9B1F800F8A420 /* simonbeep_pink.wav */,
+				B844C7172BD9B1F800F8A420 /* simonbeep_blue.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		F1DBEFBC2BBE3F30009DE466 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +106,7 @@
 				F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */,
 				F1DBEFD82BBF16F6009DE466 /* Wheel */,
 				F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */,
+				B844C70E2BD9B1F800F8A420 /* Sounds */,
 				F1DBEFCE2BBE3F32009DE466 /* Preview Content */,
 			);
 			path = SimonSays;
@@ -155,7 +190,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1DBEFD02BBE3F32009DE466 /* Preview Assets.xcassets in Resources */,
+				B844C7192BD9B1F800F8A420 /* simonbeep_orange.wav in Resources */,
+				B844C71D2BD9B1F800F8A420 /* simonbeep_cyan.wav in Resources */,
 				F1DBEFCD2BBE3F32009DE466 /* Assets.xcassets in Resources */,
+				B844C71B2BD9B1F800F8A420 /* simonbeep_indigo.wav in Resources */,
+				B844C71F2BD9B1F800F8A420 /* simonbeep_pink.wav in Resources */,
+				B844C71C2BD9B1F800F8A420 /* simonbeep_purple.wav in Resources */,
+				B844C7202BD9B1F800F8A420 /* simonbeep_blue.wav in Resources */,
+				B844C71E2BD9B1F800F8A420 /* simonbeep_yellow.wav in Resources */,
+				B844C7182BD9B1F800F8A420 /* simonbeep_green.wav in Resources */,
+				B844C71A2BD9B1F800F8A420 /* simonbeep_red.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
