@@ -39,45 +39,53 @@ struct ContentView: View {
         Color.indigo
     ]
     
-    
-
-    
-    
-    
-    var body: some View {
-        NavigationStack {
-            VStack {
+    var body: some View 
+    {
+        NavigationStack
+        {
+            ZStack
+            {
+                RadialGradient(
+                        gradient: Gradient(colors: [Color.blue, Color.purple]),
+                        center: .bottom,
+                        startRadius: 0,
+                        endRadius: 500)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea()
                 
-                //Simon Wheel
-                SimonWheel(totalSegments: 5, colors: colors)
-                
-                
-                HStack{
-                    Spacer()
-                    //play button
-                    Button("Play", action: {})
-                        .font(.largeTitle.weight(.bold))
-                        .foregroundStyle(.white)
-                        .background(.green)
-                        .buttonStyle(.bordered)
-                        .cornerRadius(5)
-                        //.clipShape(.capsule)
-                        //.frame(width: 100, height:60)
+                VStack {
                     
-                    Spacer()
-                    //settings button
-                    Button("Settings", action: {settingsScreen = true})
-                        .font(.largeTitle.weight(.bold))
-                        .foregroundStyle(.white)
-                        .background(.black)
-                        .buttonStyle(.bordered)
-                        .cornerRadius(5)
+                    //Simon Wheel
+                    SimonWheel(totalSegments: 5, colors: colors)
                     
+                    
+                    HStack{
+                        Spacer()
+                        //play button
+                        Button("Play", action: {})
+                            .font(.largeTitle.weight(.bold))
+                            .foregroundStyle(.white)
+                            .background(.green)
+                            .buttonStyle(.bordered)
+                            .cornerRadius(5)
+                            //.clipShape(.capsule)
+                            //.frame(width: 100, height:60)
+                        
+                        Spacer()
+                        //settings button
+                        Button("Settings", action: {settingsScreen = true})
+                            .font(.largeTitle.weight(.bold))
+                            .foregroundStyle(.white)
+                            .background(.black)
+                            .buttonStyle(.bordered)
+                            .cornerRadius(5)
+                        
+                        Spacer()
+                    }
                     Spacer()
+                    Spacer()
+                
                 }
-                Spacer()
-                Spacer()
-            
             }
         }
         .sheet(isPresented: $settingsScreen) {
