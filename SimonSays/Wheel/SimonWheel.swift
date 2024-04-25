@@ -13,7 +13,7 @@ var player: AVAudioPlayer!
 struct SimonWheel: View {
     
     var totalSegments: Int?
-    var colors: [Color] = [
+    let colors: [Color] = [
         Color.red,
         Color.blue,
         Color.yellow,
@@ -36,10 +36,22 @@ struct SimonWheel: View {
         "simonbeep_cyan",
         "simonbeep_pink",
         "simonbeep_indigo"
-    ];
+    ]
     
     @State var playerTurn: Bool?
     @State var selectedSegment: Int?
+    
+    @State private var currentFillColors: [Color] = [
+        Color.red,
+        Color.blue,
+        Color.yellow,
+        Color.green,
+        Color.purple,
+        Color.orange,
+        Color.cyan,
+        Color.pink,
+        Color.indigo
+    ]
     
     private var startAngles: [Double] {
         var angles: [Double] = []
@@ -68,12 +80,14 @@ struct SimonWheel: View {
                 //graft button logic from guesstheflag to here
                 ForEach(0..<totalSegments!, id: \.self){index in
                     WheelSegment(startAngle: startAngles[index], endAngle: endAngles[index])
-                        .fill(colors[index])
+                        .fill(currentFillColors[index])
                         .stroke(Color.gray, lineWidth: 4)
                         .shadow(radius: 5)
                         .onTapGesture {
                             print("section \(index)")
                             self.playSound(index: index);
+                            //put blink code here
+                            //currentFillColors[index] = Color.black;
                             withAnimation {
                                 
                             }
@@ -129,22 +143,11 @@ struct SimonWheel: View {
         }
     }
     
-    
 }
 
 
 
 
 #Preview {
-    SimonWheel(totalSegments: 8, colors: [
-        Color.red,
-        Color.blue,
-        Color.yellow,
-        Color.green,
-        Color.purple,
-        Color.orange,
-        Color.cyan,
-        Color.pink,
-        Color.indigo
-    ]/*.shuffled()*/)
+    SimonWheel(totalSegments: 8)
 }

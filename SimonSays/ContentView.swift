@@ -56,7 +56,7 @@ struct ContentView: View {
                 VStack {
                     
                     //Simon Wheel
-                    SimonWheel(totalSegments: 5, colors: colors)
+                    SimonWheel(totalSegments: settings.segments)
                     
                     
                     HStack{
