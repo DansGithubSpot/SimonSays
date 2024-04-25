@@ -7,7 +7,13 @@
 
 import Foundation
 
-
-class Settings {
+@Observable
+class Settings
+{
+    static let difficulties: [String] = ["Easy", "Medium", "Hard", "Custom"];
     
+    var difficulty = "Easy";
+    var tempo = 2.0;
+    var segments = 3;
+    var startLevel = 4;
 }

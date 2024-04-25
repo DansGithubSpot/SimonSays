@@ -17,6 +17,7 @@ struct Dif {
 
 struct ContentView: View {
     
+    @State private var settings = Settings();
     @State var settingsScreen = false
     
     var difficulties: [String : [String]] = [
@@ -80,7 +81,7 @@ struct ContentView: View {
             }
         }
         .sheet(isPresented: $settingsScreen) {
-            SettingsMenu()
+            SettingsMenu(settings: settings)
         }
     }
 }
