@@ -33,7 +33,7 @@ struct SettingsMenu: View
     let difficultyTempoPresets: [String : Double] = [
         Settings.difficulties[0]: 1.5,
         Settings.difficulties[1]: 1,
-        Settings.difficulties[2]: 0.8,
+        Settings.difficulties[2]: 0.5,
         Settings.difficulties[3]: 1.5
     ]
     
@@ -67,20 +67,21 @@ struct SettingsMenu: View
                         {
                             Text("Starting Level")
                             Spacer()
-                            Text("")
+                            Text(String(settings.startLevel))
                         }
                         
                         HStack
                         {
                             Text("Segment Count")
                             Spacer()
-                            Text("")
+                            Text(String(settings.segments))
                         }
                         
                         HStack
                         {
                             Text("Tempo")
                             Spacer()
+                            Text(String(settings.tempo))
                         }
                     }
                     else

@@ -13,6 +13,7 @@ var player: AVAudioPlayer!
 struct SimonWheel: View {
     
     var totalSegments: Int?
+    var tempo: Double?
     let colors: [Color] = [
         Color.red,
         Color.blue,
@@ -87,10 +88,8 @@ struct SimonWheel: View {
                             print("section \(index)")
                             self.playSound(index: index);
                             //put blink code here
-                            //currentFillColors[index] = Color.black;
-                            withAnimation {
-                                
-                            }
+                            self.flash(index: index)
+                            
                             /*
                             if playerTurn! {
                                 
@@ -140,6 +139,13 @@ struct SimonWheel: View {
         catch
         {
             print("Error in playing sound fx");
+        }
+    }
+    
+    func flash(index: Int) {
+        currentFillColors[index] = Color.white;
+        Timer.scheduledTimer(withTimeInterval: tempo ?? 0.75, repeats: false) { timer in
+            currentFillColors[index] = colors[index];
         }
     }
     
