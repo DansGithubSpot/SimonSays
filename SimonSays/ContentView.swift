@@ -32,7 +32,7 @@ struct ContentView: View {
                 VStack 
                 {
                     Text("Simon Says")
-                        .font(.largeTitle)
+                        .font(.largeTitle.weight(.bold))
                         .foregroundStyle(.white)
                     
                     //Simon Wheel
