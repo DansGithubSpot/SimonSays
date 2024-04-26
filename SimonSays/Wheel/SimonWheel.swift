@@ -15,6 +15,8 @@ struct SimonWheel: View {
     var totalSegments: Int?
     var tempo: Double?
     @State var logic: GameLogic
+    @State var gameOverTitle: String = "";
+    @State var isShowingGameOverScreen: Bool = false;
     
     let colorRef: [Color] = [
         Color.red,
@@ -75,6 +77,7 @@ struct SimonWheel: View {
     
     var body: some View {
         
+        
         VStack
         {
             GeometryReader { geo in
@@ -89,18 +92,12 @@ struct SimonWheel: View {
                             .onTapGesture {
                                 print("section \(index)")
                                 self.playSound(index: index);
-                                //put blink code here
+                                
                                 Task {
                                     await self.flash(index: index)
                                 }
                                 
-                                
-                                /*
-                                if playerTurn! {
-                                    
-                                }
-                                 */
-                                //blink()
+                                self.processMove(inputMove: index)
                             
                             }
                             
@@ -127,6 +124,19 @@ struct SimonWheel: View {
             }
             
             //Button("Test", action: {playPattern(pattern: logic.createPattern(maxColorIndex: totalSegments ?? 3, patternLength: 3))})
+        }
+        .alert(gameOverTitle, isPresented: $isShowingGameOverScreen)
+        {
+            Button("Continue", action: {});
+        }
+    message:
+        {
+            Spacer();
+            Spacer();
+            
+            Text("Game Over");
+            
+            Spacer();
         }
     }
     
@@ -170,11 +180,48 @@ struct SimonWheel: View {
         
     }
     
+    func processMove(inputMove: Int)
+    {
+        if (logic.pattern.count <= 0)
+        {
+            return;
+        }
+        
+        // if correct
+        if (inputMove == logic.pattern[logic.currentPatternIndex])
+        {
+            logic.incrementPatternIndex();
+            
+            if (logic.currentPatternIndex >= logic.pattern.count)
+            {
+                logic.isGameOver = true;
+                logic.hasWon = true;
+                gameOverTitle = "Winner";
+                isShowingGameOverScreen = true;
+            }
+        }
+        else // wrong
+        {
+            logic.isGameOver = true;
+            logic.hasWon = false;
+            gameOverTitle = "Loser";
+            isShowingGameOverScreen = true;
+        }
+    }
+    
 }
 
 
 
 
 #Preview {
-    SimonWheel(totalSegments: 8, logic: GameLogic())
+    var testLogic = GameLogic();
+    var testpattern = testLogic.createPattern(maxColorIndex: 8, patternLength: 3)
+    print("Preview pattern = \(testpattern)")
+    
+    return Group
+    {
+        SimonWheel(totalSegments: 8, logic: testLogic)
+    }
+    
 }

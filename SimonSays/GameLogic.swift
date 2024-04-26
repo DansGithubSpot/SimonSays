@@ -13,6 +13,8 @@ class GameLogic
 {
     public var pattern = [Int]();
     public var currentPatternIndex: Int = 0;
+    public var isGameOver: Bool = false;
+    public var hasWon: Bool = false;
     
     func createPattern(maxColorIndex: Int, patternLength: Int) -> [Int]
     {
