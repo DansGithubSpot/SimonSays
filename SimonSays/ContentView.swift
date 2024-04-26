@@ -31,6 +31,7 @@ struct ContentView: View {
                 
                 VStack 
                 {
+                    
                     Text("Simon Says")
                         .font(.largeTitle.weight(.bold))
                         .foregroundStyle(.white)
@@ -54,7 +55,7 @@ struct ContentView: View {
                         
                         Spacer()
                         //settings button
-                        Button("Settings", action: {settingsScreen = true})
+                        Button("Settings", action: settingsButton)
                             .font(.largeTitle.weight(.bold))
                             .foregroundStyle(.white)
                             .background(.black)
@@ -74,17 +75,13 @@ struct ContentView: View {
         }
     }
     
-    
-    //logic functionality
-    func displayPattern(level: Int) -> [Int] {
-        
-        
-        return [0,0]
+    func settingsButton()
+    {
+        gameLogic.reset();
+        settingsScreen = true;
     }
     
 }
-
-
 
 
 #Preview {
