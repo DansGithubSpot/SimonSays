@@ -12,9 +12,8 @@ var player: AVAudioPlayer!
 
 struct SimonWheel: View {
     
-    var totalSegments: Int?
-    var tempo: Double?
-    @State var logic: GameLogic
+    @State var settings: Settings;
+    @State var logic: GameLogic;
     @State var gameOverTitle: String = "";
     @State var isShowingGameOverScreen: Bool = false;
     
@@ -58,9 +57,9 @@ struct SimonWheel: View {
     private var startAngles: [Double] {
         var angles: [Double] = []
         var currentAngle = -90.0
-        for _ in 0..<totalSegments! {
+        for _ in 0..<settings.segments {
             angles.append(currentAngle)
-            currentAngle += 360/Double(totalSegments!)
+            currentAngle += 360/Double(settings.segments)
         }
         return angles
     }
@@ -68,8 +67,8 @@ struct SimonWheel: View {
     private var endAngles: [Double] {
         var angles: [Double] = []
         var currentAngle = -90.0
-        for _ in 0..<totalSegments! {
-            currentAngle += 360/Double(totalSegments!)
+        for _ in 0..<settings.segments {
+            currentAngle += 360/Double(settings.segments)
             angles.append(currentAngle)
         }
         return angles
@@ -84,7 +83,7 @@ struct SimonWheel: View {
                 ZStack {
                     
                     //graft button logic from guesstheflag to here
-                    ForEach(0..<totalSegments!, id: \.self){index in
+                    ForEach(0..<settings.segments, id: \.self){index in
                         WheelSegment(startAngle: startAngles[index], endAngle: endAngles[index])
                             .fill(currentFillColors[index])
                             .stroke(Color.gray, lineWidth: 4)
@@ -163,7 +162,7 @@ struct SimonWheel: View {
     
     func flash(index: Int) async {
         currentFillColors[index] = Color.white;
-        try? await Task.sleep(for: .seconds(tempo ?? 0.75))
+        try? await Task.sleep(for: .seconds(settings.tempo))
             currentFillColors[index] = colorRef[index];
     }
     
@@ -206,7 +205,7 @@ struct SimonWheel: View {
                 {
                     logic.incrementRoundIndex();
                     logic.resetPatternIndex();
-                    var newPattern = logic.createPattern(maxColorIndex: totalSegments ?? 3, patternLength: 3 + logic.currentRoundIndex);
+                    var newPattern = logic.createPattern(maxColorIndex: settings.segments, patternLength: settings.startLevel + logic.currentRoundIndex);
                     print("Starting new round: \(newPattern)");
                     playPattern(pattern: newPattern);
                 }
@@ -224,7 +223,7 @@ struct SimonWheel: View {
     func restartGame()
     {
         logic.reset()
-        var newPattern = logic.createPattern(maxColorIndex: totalSegments ?? 3, patternLength: 3)
+        var newPattern = logic.createPattern(maxColorIndex: settings.segments, patternLength: settings.startLevel)
         self.playPattern(pattern: newPattern)
     }
 }
@@ -239,7 +238,7 @@ struct SimonWheel: View {
     
     return Group
     {
-        SimonWheel(totalSegments: 8, logic: testLogic)
+        SimonWheel(settings: Settings(), logic: testLogic)
     }
     
 }

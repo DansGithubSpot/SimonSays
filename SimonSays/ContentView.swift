@@ -32,7 +32,7 @@ struct ContentView: View {
                 VStack {
                     
                     //Simon Wheel
-                    SimonWheel(totalSegments: settings.segments, logic: gameLogic)
+                    SimonWheel(settings: settings, logic: gameLogic)
                     
                     
                     HStack{
