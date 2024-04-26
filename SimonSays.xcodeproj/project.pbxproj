@@ -24,7 +24,6 @@
 		F1DBEFCD2BBE3F32009DE466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */; };
 		F1DBEFD02BBE3F32009DE466 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1DBEFCF2BBE3F32009DE466 /* Preview Assets.xcassets */; };
 		F1DBEFD72BBE4B9D009DE466 /* SimonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */; };
-		F1DBEFDC2BBF1789009DE466 /* SimonWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */; };
 		F1DBEFE02BBF18AB009DE466 /* WheelSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */; };
 		F1DBEFE22BBF37C5009DE466 /* GameLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */; };
 /* End PBXBuildFile section */
@@ -48,7 +47,6 @@
 		F1DBEFCC2BBE3F32009DE466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1DBEFCF2BBE3F32009DE466 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonWheel.swift; sourceTree = "<group>"; };
-		F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimonWheelView.swift; sourceTree = "<group>"; };
 		F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelSegment.swift; sourceTree = "<group>"; };
 		F1DBEFE12BBF37C4009DE466 /* GameLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,7 +121,6 @@
 		F1DBEFD82BBF16F6009DE466 /* Wheel */ = {
 			isa = PBXGroup;
 			children = (
-				F1DBEFDB2BBF1789009DE466 /* SimonWheelView.swift */,
 				F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */,
 				F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */,
 				F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */,
@@ -218,7 +215,6 @@
 				F1DBEFE02BBF18AB009DE466 /* WheelSegment.swift in Sources */,
 				F1CA79DC2BD1C36000AF9ED1 /* Settings.swift in Sources */,
 				F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */,
-				F1DBEFDC2BBF1789009DE466 /* SimonWheelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

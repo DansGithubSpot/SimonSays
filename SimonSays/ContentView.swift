@@ -13,7 +13,9 @@ struct ContentView: View {
     @State private var settings = Settings();
     @State var settingsScreen = false
     
-    var body: some View 
+    @State private var gameLogic = GameLogic();
+    
+    var body: some View
     {
         NavigationStack
         {
@@ -30,7 +32,7 @@ struct ContentView: View {
                 VStack {
                     
                     //Simon Wheel
-                    SimonWheel(totalSegments: settings.segments)
+                    SimonWheel(totalSegments: settings.segments, logic: gameLogic)
                     
                     
                     HStack{

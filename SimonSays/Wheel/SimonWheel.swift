@@ -14,7 +14,9 @@ struct SimonWheel: View {
     
     var totalSegments: Int?
     var tempo: Double?
-    let colors: [Color] = [
+    @State var logic: GameLogic
+    
+    let colorRef: [Color] = [
         Color.red,
         Color.blue,
         Color.yellow,
@@ -38,9 +40,6 @@ struct SimonWheel: View {
         "simonbeep_pink",
         "simonbeep_indigo"
     ]
-    
-    @State var playerTurn: Bool?
-    @State var selectedSegment: Int?
     
     @State private var currentFillColors: [Color] = [
         Color.red,
@@ -75,50 +74,59 @@ struct SimonWheel: View {
     }
     
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                
-                //graft button logic from guesstheflag to here
-                ForEach(0..<totalSegments!, id: \.self){index in
-                    WheelSegment(startAngle: startAngles[index], endAngle: endAngles[index])
-                        .fill(currentFillColors[index])
-                        .stroke(Color.gray, lineWidth: 4)
-                        .shadow(radius: 5)
-                        .onTapGesture {
-                            print("section \(index)")
-                            self.playSound(index: index);
-                            //put blink code here
-                            self.flash(index: index)
-                            
-                            /*
-                            if playerTurn! {
+        
+        VStack
+        {
+            GeometryReader { geo in
+                ZStack {
+                    
+                    //graft button logic from guesstheflag to here
+                    ForEach(0..<totalSegments!, id: \.self){index in
+                        WheelSegment(startAngle: startAngles[index], endAngle: endAngles[index])
+                            .fill(currentFillColors[index])
+                            .stroke(Color.gray, lineWidth: 4)
+                            .shadow(radius: 5)
+                            .onTapGesture {
+                                print("section \(index)")
+                                self.playSound(index: index);
+                                //put blink code here
+                                Task {
+                                    await self.flash(index: index)
+                                }
                                 
+                                
+                                /*
+                                if playerTurn! {
+                                    
+                                }
+                                 */
+                                //blink()
+                            
                             }
-                             */
-                            //blink()
-                        
-                        }
-                        
+                            
+                    }
+                    
+                    //make second wheel overlay for flashed sections
+                    
+                    Circle()
+                        .foregroundColor(Color.gray)
+                        .frame(width: geo.size.width / 5)
+                        .shadow(radius: 5)
+                    
+                    /*Correct/Incorrect/Timer Light
+                     Correct pattern flashes green once
+                     Incorrect input flashes red a few times
+                     Timer flashes white while player inputs pattern
+                     */
+                    
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: geo.size.width/7)
+                        .opacity(0.5)
                 }
-                
-                //make second wheel overlay for flashed sections
-                
-                Circle()
-                    .foregroundColor(Color.gray)
-                    .frame(width: geo.size.width / 5)
-                    .shadow(radius: 5)
-                
-                /*Correct/Incorrect/Timer Light
-                 Correct pattern flashes green once
-                 Incorrect input flashes red a few times
-                 Timer flashes white while player inputs pattern
-                 */
-                
-                Circle()
-                    .foregroundColor(.white)
-                    .frame(width: geo.size.width/7)
-                    .opacity(0.5)
             }
+            
+            //Button("Test", action: {playPattern(pattern: logic.createPattern(maxColorIndex: totalSegments ?? 3, patternLength: 3))})
         }
     }
     
@@ -142,11 +150,24 @@ struct SimonWheel: View {
         }
     }
     
-    func flash(index: Int) {
+    func flash(index: Int) async {
         currentFillColors[index] = Color.white;
-        Timer.scheduledTimer(withTimeInterval: tempo ?? 0.75, repeats: false) { timer in
-            currentFillColors[index] = colors[index];
+        try? await Task.sleep(for: .seconds(tempo ?? 0.75))
+            currentFillColors[index] = colorRef[index];
+    }
+    
+    func playPattern(pattern: [Int])
+    {
+        print("Playing pattern: \(pattern)")
+        Task
+        {
+            for i in 0..<pattern.count
+            {
+                self.playSound(index: pattern[i])
+                await self.flash(index: pattern[i]);
+            }
         }
+        
     }
     
 }
@@ -155,5 +176,5 @@ struct SimonWheel: View {
 
 
 #Preview {
-    SimonWheel(totalSegments: 8)
+    SimonWheel(totalSegments: 8, logic: GameLogic())
 }
