@@ -29,7 +29,11 @@ struct ContentView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .ignoresSafeArea()
                 
-                VStack {
+                VStack 
+                {
+                    Text("Simon Says")
+                        .font(.largeTitle)
+                        .foregroundStyle(.white)
                     
                     //Simon Wheel
                     SimonWheel(settings: settings, logic: gameLogic)
