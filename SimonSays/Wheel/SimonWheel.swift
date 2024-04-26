@@ -127,7 +127,8 @@ struct SimonWheel: View {
         }
         .alert(gameOverTitle, isPresented: $isShowingGameOverScreen)
         {
-            Button("Continue", action: {});
+            Button("Continue", action: {logic.resetPatternIndex()});
+            Button("Replay", action: restartGame)
         }
     message:
         {
@@ -194,10 +195,21 @@ struct SimonWheel: View {
             
             if (logic.currentPatternIndex >= logic.pattern.count)
             {
-                logic.isGameOver = true;
-                logic.hasWon = true;
-                gameOverTitle = "Winner";
-                isShowingGameOverScreen = true;
+                if (logic.currentRoundIndex >= 2)
+                {
+                    logic.isGameOver = true;
+                    logic.hasWon = true;
+                    gameOverTitle = "Winner";
+                    isShowingGameOverScreen = true;
+                }
+                else
+                {
+                    logic.incrementRoundIndex();
+                    logic.resetPatternIndex();
+                    var newPattern = logic.createPattern(maxColorIndex: totalSegments ?? 3, patternLength: 3 + logic.currentRoundIndex);
+                    print("Starting new round: \(newPattern)");
+                    playPattern(pattern: newPattern);
+                }
             }
         }
         else // wrong
@@ -209,6 +221,12 @@ struct SimonWheel: View {
         }
     }
     
+    func restartGame()
+    {
+        logic.reset()
+        var newPattern = logic.createPattern(maxColorIndex: totalSegments ?? 3, patternLength: 3)
+        self.playPattern(pattern: newPattern)
+    }
 }
 
 

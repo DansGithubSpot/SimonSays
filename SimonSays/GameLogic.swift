@@ -13,6 +13,7 @@ class GameLogic
 {
     public var pattern = [Int]();
     public var currentPatternIndex: Int = 0;
+    public var currentRoundIndex: Int = 0;
     public var isGameOver: Bool = false;
     public var hasWon: Bool = false;
     
@@ -36,5 +37,23 @@ class GameLogic
     func resetPatternIndex()
     {
         self.currentPatternIndex = 0;
+    }
+    
+    func incrementRoundIndex()
+    {
+        self.currentRoundIndex += 1;
+    }
+    
+    func resetRoundIndex()
+    {
+        self.currentRoundIndex = 0;
+    }
+    
+    func reset()
+    {
+        self.resetPatternIndex()
+        self.resetRoundIndex()
+        self.isGameOver = false;
+        self.hasWon = false;
     }
 }
