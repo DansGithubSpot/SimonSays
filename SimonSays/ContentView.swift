@@ -36,13 +36,14 @@ struct ContentView: View {
                         .foregroundStyle(.white)
                     
                     //Simon Wheel
-                    SimonWheel(settings: settings, logic: gameLogic)
+                    let mySimon = SimonWheel(settings: settings, logic: gameLogic)
+                    mySimon
                     
                     
                     HStack{
                         Spacer()
                         //play button
-                        Button("Play", action: {})
+                        Button("Play", action: {mySimon.restartGame()})
                             .font(.largeTitle.weight(.bold))
                             .foregroundStyle(.white)
                             .background(.green)

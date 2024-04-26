@@ -16,7 +16,6 @@
 		B844C71E2BD9B1F800F8A420 /* simonbeep_yellow.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7152BD9B1F800F8A420 /* simonbeep_yellow.wav */; };
 		B844C71F2BD9B1F800F8A420 /* simonbeep_pink.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7162BD9B1F800F8A420 /* simonbeep_pink.wav */; };
 		B844C7202BD9B1F800F8A420 /* simonbeep_blue.wav in Resources */ = {isa = PBXBuildFile; fileRef = B844C7172BD9B1F800F8A420 /* simonbeep_blue.wav */; };
-		F1CA79D42BD0918F00AF9ED1 /* ButtonWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */; };
 		F1CA79D82BD1AB1900AF9ED1 /* SettingsMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */; };
 		F1CA79DC2BD1C36000AF9ED1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */; };
 		F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1DBEFC82BBE3F30009DE466 /* SimonSaysApp.swift */; };
@@ -38,7 +37,6 @@
 		B844C7152BD9B1F800F8A420 /* simonbeep_yellow.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_yellow.wav; sourceTree = "<group>"; };
 		B844C7162BD9B1F800F8A420 /* simonbeep_pink.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_pink.wav; sourceTree = "<group>"; };
 		B844C7172BD9B1F800F8A420 /* simonbeep_blue.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = simonbeep_blue.wav; sourceTree = "<group>"; };
-		F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWheel.swift; sourceTree = "<group>"; };
 		F1CA79D72BD1AB1900AF9ED1 /* SettingsMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsMenu.swift; sourceTree = "<group>"; };
 		F1CA79DB2BD1C36000AF9ED1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		F1DBEFC52BBE3F30009DE466 /* SimonSays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimonSays.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				F1DBEFD62BBE4B9D009DE466 /* SimonWheel.swift */,
-				F1CA79D32BD0918F00AF9ED1 /* ButtonWheel.swift */,
 				F1DBEFDF2BBF18AB009DE466 /* WheelSegment.swift */,
 			);
 			path = Wheel;
@@ -211,7 +208,6 @@
 				F1DBEFCB2BBE3F30009DE466 /* ContentView.swift in Sources */,
 				F1DBEFD72BBE4B9D009DE466 /* SimonWheel.swift in Sources */,
 				F1CA79D82BD1AB1900AF9ED1 /* SettingsMenu.swift in Sources */,
-				F1CA79D42BD0918F00AF9ED1 /* ButtonWheel.swift in Sources */,
 				F1DBEFE02BBF18AB009DE466 /* WheelSegment.swift in Sources */,
 				F1CA79DC2BD1C36000AF9ED1 /* Settings.swift in Sources */,
 				F1DBEFC92BBE3F30009DE466 /* SimonSaysApp.swift in Sources */,
